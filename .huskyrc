@@ -1,0 +1,1 @@
+"pre-commit": "pretty-quick --staged"
