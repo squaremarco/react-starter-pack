@@ -5,8 +5,6 @@ const CircularDependencyPlugin = require('circular-dependency-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
-const pkg = require('../package.json');
-
 module.exports = require('./webpack.common')({
   mode: 'development',
   entry: ['react-hot-loader/patch', path.resolve(process.cwd(), 'src/index.js')],
@@ -63,6 +61,7 @@ module.exports = require('./webpack.common')({
   ],
   devtool: 'source-map',
   devServer: {
+    port: 5001,
     contentBase: path.resolve(process.cwd(), 'src/'),
     historyApiFallback: true,
     headers: {
