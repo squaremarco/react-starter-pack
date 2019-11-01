@@ -1,0 +1,51 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "prettier",
+    "prettier/react",
+    "plugin:ramda/recommended",
+    "plugin:jest/recommended"
+  ],
+  "plugins": ["ramda", "prettier", "babel", "jest"],
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest/globals": true
+  },
+  "settings": {
+    "react": { "version": "detect" },
+    "import/resolver": {
+      "node": {},
+      "jest": {
+        "jestConfigFile": "./jest.config.js"
+      },
+      "webpack": {
+        "resolve": {
+          "alias": {
+            "Root": ".src/",
+            "Assets": ".src/assets/",
+            "Components": ".src/components/",
+            "Store": ".src/store/",
+            "Utils": ".src/utils/"
+          }
+        }
+      }
+    }
+  },
+  "rules": {
+    "react/require-default-props": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/*.test.js", "**/*.spec.js", "./config/*", "./testUtils/*"] }
+    ],
+    "comma-dangle": "off",
+    "arrow-parens": "off",
+    "no-unused-vars": "warn"
+  }
+}

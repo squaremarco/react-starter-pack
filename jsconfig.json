@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "es6",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "lib": ["dom", "es2015", "es2016"],
+    "target": "esnext",
+    "checkJs": true,
+    "jsx": "react",
+    "paths": {
+      "Root/*": ["./src/*"],
+      "Assets/*": ["./src/assets/*"],
+      "Components/*": ["./src/components/*"],
+      "Store/*": ["./src/store/*"],
+      "Utils/*": ["./src/utils/*"],
+      "TestUtils/*": ["./testUtils/*"]
+    }
+  },
+  "typeAcquisition": {
+    "include": ["jest"]
+  },
+  "include": ["src/*", "testUtils/"],
+  "exclude": ["node_modules", "dist"]
+}
