@@ -98,20 +98,25 @@
   "name": "react-starter-pack",
   "private": true,
   "scripts": {
-    "build": "npm run build:clean && cross-env NODE_ENV=production  webpack --color -p --progress --hide-modules --display-optimization-bailout",
+    "build": "npm run build:clean && cross-env NODE_ENV=production webpack --color -p --progress --hide-modules --display-optimization-bailout",
+    "build:production": "npm run test:build && npm run build",
     "build:clean": "rimraf ./dist",
-    "clean": "npm run build:clean",
+    "clean-all": "npm run build:clean && npm run test:clean",
+    "prettier": "pretty-quick",
+    "prettier:staged": "npm run prettier -- --staged",
     "serve": "serve -n",
     "serve:coverage": "npm run serve coverage/lcov-report",
     "start": "cross-env NODE_ENV=development webpack-dev-server --hot --progress --color --open",
-    "test": "jest --passWithNoTests",
-    "test:coverage": "npm run test -- --coverage",
-    "test:update": "npm run test -- -u",
-    "test:watch": "npm run test -- --watch"
+    "test": "cross-env NODE_ENV=test jest --color",
+    "test:coverage": "npm test -- --coverage",
+    "test:update": "npm test -- -u",
+    "test:watch": "npm test -- --watch",
+    "test:build": "npm test -- --bail --silent",
+    "test:clean": "rimraf ./coverage"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "npm run prettier:staged && npm run test:build"
     }
   },
   "version": "0.0.1"
