@@ -109,5 +109,10 @@
     "test:update": "npm run test -- -u",
     "test:watch": "npm run test -- --watch"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "version": "0.0.1"
 }

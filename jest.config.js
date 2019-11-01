@@ -8,7 +8,7 @@ module.exports = {
     '^Components(.*)$': '<rootDir>/src/components$1',
     '^Store(.*)$': '<rootDir>/src/store$1',
     '^Utils(.*)$': '<rootDir>/src/utils$1',
-    '^TestUtils(.*)$': '<rootDir>/testUtils'
+    '^TestUtils(.*)$': '<rootDir>/testUtils$1'
   },
   collectCoverage: true,
   collectCoverageFrom: ['<rootDir>/src/**/*.js', '!**/node_modules/**'],
