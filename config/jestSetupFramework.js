@@ -1,3 +1,4 @@
+import '@testing-library/jest-dom/extend-expect';
 import 'jest-styled-components';
 import 'jest-localstorage-mock';
 
@@ -5,7 +6,7 @@ import 'jest-localstorage-mock';
 const { error } = global.console;
 
 const propTypeErrorThrow = (message, ...args) => {
-  if (/(Invalid prop|Failed prop type)/gi.test(message)) {
+  if (/(invalid prop|failed prop type)/gi.test(message)) {
     throw new Error(message);
   }
 

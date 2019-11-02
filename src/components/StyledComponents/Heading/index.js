@@ -6,4 +6,9 @@ const StyledHeading = styled.h1`
   color: #4c4c4c;
 `;
 
-export default () => <StyledHeading>Hello, World!</StyledHeading>;
+const Heading = (props) => {
+  const { children } = props;
+  return <StyledHeading>{children}</StyledHeading>;
+};
+
+export default Heading;

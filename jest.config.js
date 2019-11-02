@@ -1,5 +1,4 @@
 module.exports = {
-  setupFiles: ['<rootDir>/config/enzymeConfig'],
   setupFilesAfterEnv: ['<rootDir>/config/jestSetupFramework'],
   moduleFileExtensions: ['js', 'jsx', 'json', 'node'],
   moduleNameMapper: {
@@ -11,6 +10,5 @@ module.exports = {
     '^TestUtils(.*)$': '<rootDir>/testUtils$1'
   },
   collectCoverage: true,
-  collectCoverageFrom: ['<rootDir>/src/**/*.js', '!**/node_modules/**'],
-  snapshotSerializers: ['enzyme-to-json/serializer']
+  collectCoverageFrom: ['<rootDir>/src/**/*.js', '!**/node_modules/**']
 };
