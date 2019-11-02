@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  prod:
+    build: .
+    restart: always
+    ports:
+      - 80

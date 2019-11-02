@@ -113,7 +113,10 @@
     "test:watch": "npm test -- --watch",
     "test:build": "npm test -- --bail --silent",
     "test:clean": "rimraf ./coverage",
-    "compose:dev": "docker-compose -f docker-compose-dev.yml",
+    "compose": "docker-compose",
+    "compose:up": "npm run compose -- up",
+    "compose:stop": "npm run compose -- stop",
+    "compose:dev": "npm run compose -- -f docker-compose-dev.yml",
     "compose:dev:up": "npm run compose:dev -- up",
     "compose:dev:stop": "npm run compose:dev -- stop"
   },
