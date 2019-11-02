@@ -1,3 +1,3 @@
-export default [
-  /* add individual combineEpics here */
-];
+import { appEpics } from '../App.reducer';
+
+export default [appEpics /* add individual combineEpics here */];

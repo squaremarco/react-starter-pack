@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   dev:
-    image: node:13-alpine
+    image: node:12-alpine
     restart: always
     command: npm run start
     working_dir: /app

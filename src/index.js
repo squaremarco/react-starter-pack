@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 
 import configureStore from 'Store/index';
-import createRootReducer from 'Store/rootReducer';
 
 import App from './App';
 import 'index.scss';
@@ -27,6 +26,5 @@ hmrRender(App);
 if (module.hot) {
   module.hot.accept('./App.js', () => {
     hmrRender(App);
-    store.replaceReducer(createRootReducer());
   });
 }
