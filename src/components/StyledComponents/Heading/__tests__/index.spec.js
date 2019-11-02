@@ -20,7 +20,7 @@ describe('Heading', () => {
   });
 
   it('Snapshot test', () => {
-    const { asFragment } = render(component);
-    expect(asFragment()).toMatchSnapshot();
+    const { container } = render(component);
+    expect(container).toMatchSnapshot();
   });
 });

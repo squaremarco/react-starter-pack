@@ -6,7 +6,7 @@ afterEach(cleanup);
 
 describe('HelloWorld', () => {
   it('Snapshot test', () => {
-    const { asFragment } = render(<HelloWorld />);
-    expect(asFragment()).toMatchSnapshot();
+    const { container } = render(<HelloWorld />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

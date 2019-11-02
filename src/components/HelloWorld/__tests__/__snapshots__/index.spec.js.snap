@@ -1,16 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HelloWorld Snapshot test 1`] = `
-<DocumentFragment>
-  .c0 {
+.c0 {
   text-align: center;
   color: #4c4c4c;
 }
 
 <h1
-    class="c0"
-  >
-    Hello, World!
-  </h1>
-</DocumentFragment>
+  class="c0"
+>
+  Hello, World!
+</h1>
 `;
