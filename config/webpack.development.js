@@ -61,7 +61,8 @@ module.exports = require('./webpack.common')({
   ],
   devtool: 'source-map',
   devServer: {
-    port: 5001,
+    host: '0.0.0.0',
+    port: 5000,
     contentBase: path.resolve(process.cwd(), 'src/'),
     historyApiFallback: true,
     headers: {
@@ -70,7 +71,11 @@ module.exports = require('./webpack.common')({
     overlay: {
       errors: true
     },
-    clientLogLevel: 'silent'
+    clientLogLevel: 'silent',
+    watchOptions: {
+      aggregateTimeout: 200,
+      poll: 500
+    }
   },
   performance: {
     hints: false

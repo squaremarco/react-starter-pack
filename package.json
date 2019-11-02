@@ -106,13 +106,16 @@
     "prettier:staged": "npm run prettier -- --staged",
     "serve": "serve -n",
     "serve:coverage": "npm run serve coverage/lcov-report",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --hot --progress --color --open",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --hot --progress --color --inline",
     "test": "cross-env NODE_ENV=test jest --color",
     "test:coverage": "npm test -- --coverage",
     "test:update": "npm test -- -u",
     "test:watch": "npm test -- --watch",
     "test:build": "npm test -- --bail --silent",
-    "test:clean": "rimraf ./coverage"
+    "test:clean": "rimraf ./coverage",
+    "compose:dev": "docker-compose -f docker-compose-dev.yml",
+    "compose:dev:up": "npm run compose:dev -- up",
+    "compose:dev:stop": "npm run compose:dev -- stop"
   },
   "husky": {
     "hooks": {
