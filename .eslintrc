@@ -7,9 +7,11 @@
     "prettier",
     "prettier/react",
     "plugin:ramda/recommended",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:promise/recommended"
   ],
-  "plugins": ["ramda", "prettier", "babel", "jest"],
+  "plugins": ["ramda", "prettier", "babel", "sonarjs", "jest", "optimize-regex", "promise"],
   "env": {
     "node": true,
     "browser": true,
@@ -36,6 +38,7 @@
     }
   },
   "rules": {
+    "optimize-regex/optimize-regex": "warn",
     "react/require-default-props": "off",
     "react/jsx-filename-extension": "off",
     "react/jsx-props-no-spreading": "off",
@@ -45,7 +48,6 @@
       { "devDependencies": ["**/*.test.js", "**/*.spec.js", "./config/*", "./testUtils/*"] }
     ],
     "comma-dangle": "off",
-    "arrow-parens": "off",
     "no-unused-vars": "warn"
   }
 }
